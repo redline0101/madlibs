@@ -1,0 +1,11 @@
+animal = input("Name any animal: ")
+adjective1 = input("Name any adjective: ")
+verb1 = input("Name any verb(Make sure it ends with ing): ")
+reaction = input("input a reaction: ")
+
+
+
+print(f"I saw a {animal}.")
+print(f"It was very {adjective1}. ")
+print(f"And the {animal} started {verb1}.")
+print(f"And I was {reaction}")
