@@ -1,11 +1,33 @@
-animal = input("Name any animal: ")
-adjective1 = input("Name any adjective: ")
-verb1 = input("Name any verb(Make sure it ends with ing): ")
-reaction = input("input a reaction: ")
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mad Libs Game</title>
+</head>
+<body>
+  <h1>Mad Libs</h1>
 
+  <p>Name any animal: <input id="animal" type="text"></p>
+  <p>Name any adjective: <input id="adjective1" type="text"></p>
+  <p>Name any verb (ending in -ing): <input id="verb1" type="text"></p>
+  <p>Input a reaction: <input id="reaction" type="text"></p>
 
+  <button onclick="makeStory()">Create Story</button>
 
-print(f"I saw a {animal}.")
-print(f"It was very {adjective1}. ")
-print(f"And the {animal} started {verb1}.")
-print(f"And I was {reaction}")
+  <h3 id="story"></h3>
+
+  <script>
+    function makeStory() {
+      let animal = document.getElementById("animal").value;
+      let adjective1 = document.getElementById("adjective1").value;
+      let verb1 = document.getElementById("verb1").value;
+      let reaction = document.getElementById("reaction").value;
+
+      document.getElementById("story").innerHTML = 
+        `I saw a ${animal}.<br>` +
+        `It was very ${adjective1}.<br>` +
+        `And the ${animal} started ${verb1}.<br>` +
+        `And I was ${reaction}`;
+    }
+  </script>
+</body>
+</html>
